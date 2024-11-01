@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        #links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Ocupa el ancho completo de la celda */
+            height: 100px; /* Altura fija para los botones */
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px; /* Esquinas redondeadas */
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gramajes</h1>
+    <input type="text" id="search" placeholder="Buscar Gramajes..." onkeyup="filterLinks()">
+    
+    <div id="links">
+        <a href="Aguacates Rellenos.html">Aguacates Rellenos</a>
+        <a href="Aguas de Sabor.html">Aguas de Sabor</a>
+        <a href="Americano.html">Americano</a>
+        <a href="Antigripal.html">Antigripal</a>
+        <a href="Antioxidante.html">Antioxidante</a>
+        <a href="Arma tu crepa.html">Arma tu crepa</a>
+        <a href="Arma tu ensalada.html">Arma tu ensalada</a>
+        <a href="Arma tu platillo.html">Arma tu platillo</a>
+        <a href="Atún al chimichurri.html">Atún al chimichurri</a>
+        <a href="Atún Picante.html">Atún Picante</a>
+        <a href="Avocado Toast.html">Avocado Toast</a>
+        <a href="Axolote.html">Axolote</a>
+        <a href="Balam.html">Balam</a>
+        <a href="Bisteck Oriental.html">Bisteck Oriental</a>
+        <a href="Burrito.html">Burrito</a>
+        <a href="Camaleón.html">Camaleón</a>
+        <a href="Canario.html">Canario</a>
+        <a href="Capibara.html">Capibara</a>
+        <a href="Capuchino.html">Capuchino</a>
+        <a href="Cardenal.html">Cardenal</a>
+        <a href="Chilaquiles Especiales.html">Chilaquiles Especiales</a>
+        <a href="Chilaquiles Rojos.html">Chilaquiles Rojos</a>
+        <a href="Chilaquiles Suizas.html">Chilaquiles Suizas</a>
+        <a href="Chilaquiles Verde.html">Chilaquiles Verde</a>
+        <a href="Chocolate Abuelita.html">Chocolate Abuelita</a>
+        <a href="Ciabatta Carnes.html">Ciabatta Carnes</a>
+        <a href="Ciabatta.html">Ciabatta</a>
+        <a href="Coctel de frutas.html">Coctel de frutas</a>
+        <a href="Copia de Crepa Hawaiana.html">Copia de Crepa Hawaiana</a>
+        <a href="Costeo Extras.html">Costeo Extras</a>
+        <a href="Crepa alambre.html">Crepa alambre</a>
+        <a href="Crepa cajewi.html">Crepa cajewi</a>
+        <a href="Crepa carnes.html">Crepa carnes</a>
+        <a href="Crepa crema de cacahuate y manzana.html">Crepa crema de cacahuate y manzana</a>
+        <a href="Crepa Crema de coco.html">Crepa Crema de coco</a>
+        <a href="Crepa Hawaiana.html">Crepa Hawaiana</a>
+        <a href="Crepa Navideña.html">Crepa Navideña</a>
+        <a href="Crepa Nutella Frutas.html">Crepa Nutella Frutas</a>
+        <a href="Crepa pastor.html">Crepa pastor</a>
+        <a href="Crepa peperoni.html">Crepa peperoni</a>
+        <a href="Crepa selva negra.html">Crepa selva negra</a>
+        <a href="Crepa tiramisú.html">Crepa tiramisú</a>
+        <a href="Cuernito.html">Cuernito</a>
+        <a href="Detox.html">Detox</a>
+        <a href="Enchiladas Suizas.html">Enchiladas Suizas</a>
+        <a href="Energetico.html">Energetico</a>
+        <a href="Estimulante.html">Estimulante</a>
+        <a href="Filete cherry.html">Filete cherry</a>
+        <a href="Filete empapelado.html">Filete empapelado</a>
+        <a href="Flamenco.html">Flamenco</a>
+        <a href="Frapé de Frutos Rojos.html">Frapé de Frutos Rojos</a>
+        <a href="Frapé de Mazapán.html">Frapé de Mazapán</a>
+        <a href="Frapé de Oreo.html">Frapé de Oreo</a>
+        <a href="Frappé chocomenta.html">Frappé chocomenta</a>
+        <a href="Frappé de Mango.html">Frappé de Mango</a>
+        <a href="Frappé Taro.html">Frappé Taro</a>
+        <a href="Frapuchino.html">Frapuchino</a>
+        <a href="Fresas con crema.html">Fresas con crema</a>
+        <a href="Geko.html">Geko</a>
+        <a href="Guacamaya.html">Guacamaya</a>
+        <a href="Hot cakes.html">Hot cakes</a>
+        <a href="huevos al gusto.html">huevos al gusto</a>
+        <a href="Huevos Divorciados.html">Huevos Divorciados</a>
+        <a href="Huevos Rancheros.html">Huevos Rancheros</a>
+        <a href="Jugo de naranja.html">Jugo de naranja</a>
+        <a href="Jugo Verde.html">Jugo Verde</a>
+        <a href="Licuados.html">Licuados</a>
+        <a href="Malteadas.html">Malteadas</a>
+        <a href="Mojitos.html">Mojitos</a>
+        <a href="Mollepizza.html">Mollepizza</a>
+        <a href="Molletes de Camarón.html">Molletes de Camarón</a>
+        <a href="Molletes.html">Molletes</a>
+        <a href="Monarca.html">Monarca</a>
+        <a href="Nuevos Molletes.html">Nuevos Molletes</a>
+        <a href="Omellete Champiñones.html">Omellete Champiñones</a>
+        <a href="Omellete Fit.html">Omellete Fit</a>
+        <a href="Omellete Jamon.html">Omellete Jamon</a>
+        <a href="Pan con Mermelada.html">Pan con Mermelada</a>
+        <a href="Pasta blanca.html">Pasta blanca</a>
+        <a href="Pasta flor de calabaza.html">Pasta flor de calabaza</a>
+        <a href="Pasta Poblano.html">Pasta Poblano</a>
+        <a href="Pechuguitas BBQ.html">Pechuguitas BBQ</a>
+        <a href="pechuguitas Spicy.html">pechuguitas Spicy</a>
+        <a href="Philadelphia y Durazno.html">Philadelphia y Durazno</a>
+        <a href="Pollo a la China.html">Pollo a la China</a>
+        <a href="Pollo al Curry.html">Pollo al Curry</a>
+        <a href="Pollo flor de calabaza.html">Pollo flor de calabaza</a>
+        <a href="Pollo Marroqui.html">Pollo Marroqui</a>
+        <a href="Recetas registro.html">Recetas registro</a>
+        <a href="Salmón en salsa de mango.html">Salmón en salsa de mango</a>
+        <a href="salmón.html">salmón</a>
+        <a href="Sandwich atun.html">Sandwich atun</a>
+        <a href="Sandwich.html">Sandwich</a>
+        <a href="Sincronizadas.html">Sincronizadas</a>
+        <a href="Soda italiana blueberry.html">Soda italiana blueberry</a>
+        <a href="Soda italiana fresa.html">Soda italiana fresa</a>
+        <a href="Soda italiana kiwi.html">Soda italiana kiwi</a>
+        <a href="Soda italiana mango.html">Soda italiana mango</a>
+        <a href="Soda italiana manzana.html">Soda italiana manzana</a>
+        <a href="Soda Italiana maracuya.html">Soda Italiana maracuya</a>
+        <a href="Sub 21 Salsa Morita mango.html">Sub 21 Salsa Morita mango</a>
+        <a href="Sub 22 Masa crepas.html">Sub 22 Masa crepas</a>
+        <a href="Sub 23 Espaguetis.html">Sub 23 Espaguetis</a>
+        <a href="Sub 24 Fusilli.html">Sub 24 Fusilli</a>
+        <a href="Sub 25 Fetucine.html">Sub 25 Fetucine</a>
+        <a href="Sub1 Pollo Asado.html">Sub1 Pollo Asado</a>
+        <a href="Sub2 Salsa Roja.html">Sub2 Salsa Roja</a>
+        <a href="Sub3 Salsa Verde.html">Sub3 Salsa Verde</a>
+        <a href="Sub4 Zanahoria Asada.html">Sub4 Zanahoria Asada</a>
+        <a href="Sub5 Atún-Mayo.html">Sub5 Atún-Mayo</a>
+        <a href="Sub6 Salsa Suiza.html">Sub6 Salsa Suiza</a>
+        <a href="Sub7 Frijoles Refritos.html">Sub7 Frijoles Refritos</a>
+        <a href="Sub8 Tortilla frita.html">Sub8 Tortilla frita</a>
+        <a href="Sub9 Masa Hot cakes.html">Sub9 Masa Hot cakes</a>
+        <a href="Sub10 Atún-Picante.html">Sub10 Atún-Picante</a>
+        <a href="Sub11 Arroz Cocido.html">Sub11 Arroz Cocido</a>
+        <a href="Sub12 Ranch.html">Sub12 Ranch</a>
+        <a href="Sub13 Pollo Deshebrado.html">Sub13 Pollo Deshebrado</a>
+        <a href="Sub14 Pico de gallo.html">Sub14 Pico de gallo</a>
+        <a href="Sub15 Camarones picantes.html">Sub15 Camarones picantes</a>
+        <a href="Sub16 Aderezo de Nuez.html">Sub16 Aderezo de Nuez</a>
+        <a href="Sub17 Aderezo de Limón.html">Sub17 Aderezo de Limón</a>
+        <a href="Sub18 Piña Asada.html">Sub18 Piña Asada</a>
+        <a href="Sub19 Salsa Macha.html">Sub19 Salsa Macha</a>
+        <a href="Sub20 Salsa picante.html">Sub20 Salsa picante</a>
+        <a href="Sub26 pesto.html">Sub26 pesto</a>
+        <a href="Sub27 Salsa Flor de calabaza.html">Sub27 Salsa Flor de calabaza</a>
+        <a href="Sub28 salsa poblano.html">Sub28 salsa poblano</a>
+        <a href="Sub29 Chimichurri.html">Sub29 Chimichurri</a>
+        <a href="Sub30 Miel Mostaza.html">Sub30 Miel Mostaza</a>
+        <a href="Sub31 Nuez caramelizada.html">Sub31 Nuez caramelizada</a>
+        <a href="Sub32 Papas sazonadas.html">Sub32 Papas sazonadas</a>
+        <a href="Sub33 Salmon asado.html">Sub33 Salmon asado</a>
+        <a href="Sub34 Ensalada.html">Sub34 Ensalada</a>
+        <a href="Sub35 Masa waffles.html">Sub35 Masa waffles</a>
+        <a href="Sub37 Queso asado.html">Sub37 Queso asado</a>
+        <a href="Sub38 nopal asado.html">Sub38 nopal asado</a>
+        <a href="Sub39 Verduras al vapor.html">Sub39 Verduras al vapor</a>
+        <a href="Sub40 Verduras hervidas.html">Sub40 Verduras hervidas</a>
+        <a href="Sub41 Atún asado.html">Sub41 Atún asado</a>
+        <a href="Sub41 Mermelada de Cereza.html">Sub41 Mermelada de Cereza</a>
+        <a href="Sub42 Tilapia asada.html">Sub42 Tilapia asada</a>
+        <a href="Sub43 Bistec.html">Sub43 Bistec</a>
+        <a href="Sub44 Arrachera.html">Sub44 Arrachera</a>
+        <a href="Tacos cecina.html">Tacos cecina</a>
+        <a href="Taquitos de pescado.html">Taquitos de pescado</a>
+        <a href="Tés.html">Tés</a>
+        <a href="Tizana.html">Tizana</a>
+        <a href="Tucan.html">Tucan</a>
+        <a href="Waffles deluxe.html">Waffles deluxe</a>
+        <a href="Waffles.html">Waffles</a>
+    </div>
+
+    <script>
+        function filterLinks() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const links = document.querySelectorAll('#links a');
+
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.classList.toggle('hidden', !text.includes(searchInput));
+            });
+        }
+    </script>
+
+</body>
+</html>
